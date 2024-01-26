@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search anything..." oninput="searchList()">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div >
+            <ul id="result-box">
+                <li>Lahore</li>
+                <li>Karachi</li>
+                <li>Narowal</li>
+                <li>Sindh</li>
+                <li>KPK</li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- <script>
+        const searchjob = () => {
+            let filter = document.getElementById('input-box').value.toUppercase();
+            let ul = document.getElementById('result-box');
+            let li = ul.getElementsByTagName('li');
+            for (var i = 0; i < li.length; i++) {
+                let a = li[i].getElementsByClassName('a')[0];
+                if (a) {
+                    let textValue = a.textContent || a.innerHTML;
+                    if (textValue.toUppercase().indexOf(filter) > -1) {
+                        li[i].style.display = '';
+                    } else {
+                        li[i].style.display = 'none';
+                    }
+                }
+            }
+        }
+
+    </script> -->
+
+
+
+
+
+    <script>
+        function searchList() {
+            // Get the search query from the input box
+            var searchQuery = document.getElementById('input-box').value.toLowerCase();
+    
+            // Get the list and list items
+            var list = document.getElementById('result-box');
+            var items = list.getElementsByTagName('li');
+    
+            // Loop through all list items, hide those that don't match the search query
+            for (var i = 0; i < items.length; i++) {
+                var itemText = items[i].textContent.toLowerCase();
+                var shouldHide = !itemText.includes(searchQuery);
+                items[i].style.display = shouldHide ? 'none' : '';
+            }
+        }
+    </script>
+</body>
+
+</html>

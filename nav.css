@@ -1,0 +1,73 @@
+.navbar{
+    background-color: brown;
+    
+}
+.navbar li{
+    list-style: none;
+    float: left;
+    margin: 12px 6px;
+}
+.navbar ul {
+    overflow: auto;
+}
+.navbar li a{
+    padding-left: 4px;
+    padding: 3px 3px;
+    text-decoration: none;
+    color: white;
+}
+.navbar li a:hover{
+color: chocolate;
+}
+/* .act , .navbar ul li :hover{
+    background-color: black;
+  
+} */
+.navbar input{
+    border: 2px solid black;
+    border-radius: 7px;
+   
+    padding :3px 6px ;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.menu{
+    display: none;
+}
+.navbar ul li:hover .menu{
+    display: block;
+    position: absolute;
+    background-color: brown;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.navbar ul li:hover .menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.navbar ul li:hover .menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.navbar ul li:hover .menu ul li :last-child{
+    border-bottom: none;
+}
+
+.search{
+    padding: 9px 13px;
+    float: right;
+}
+/* .i_search{
+ border: 2px solid black;
+ border-radius: 3px;
+} */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td,
+        table {
+            /* width: 90px; */
+            border: 1px solid black;
+            border-collapse: collapse;
+
+
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="myinput" placeholder="Name.." onkeyup="searchfun()">
+    <table id="mytable">
+        <tr class="header">
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Afnan</td>
+            <td>056</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>78</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>Numan</td>
+            <td>67</td>
+            <td>B</td>
+        </tr>
+    </table>
+
+    <script>
+        const searchfun = () => {
+            let filter = document.getElementById('myinput').value.toUppercase();
+
+            let mytable = document.getElementById('mytable');
+            let tr = mytable.getElementsByTagName('tr');
+
+            for (var i = 0; i < tr.length; i++) {
+                let dt = tr[i].getElementsByTagName('td')[0];
+                if (td) {
+                    let textvalue = td.textContent || td.innerHTML;
+
+                    if (textvalue.toUppercase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
